@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="emp" class="com.pearz.spring5.pojo.Emp">
+        <property name="name" value="pearz"></property>
+        <property name="gender" value="男"></property>
+        <property name="dept" ref="dept">
+           <!-- <bean id="dept" class="com.pearz.spring5.pojo.Dept">
+                <property name="dname" value="IT"></property>
+            </bean>-->
+        </property>
+        <property name="dept.dname" value="青理"></property>
+    </bean>
+    <bean id="dept" class="com.pearz.spring5.pojo.Dept">
+        <property name="dname" value="西北大学"></property>
+    </bean>
+</beans>

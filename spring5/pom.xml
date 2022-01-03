@@ -9,6 +9,8 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>spring5_demo1</module>
+      <module>spring5_demo2</module>
+      <module>spring5_demo3</module>
   </modules>
   <packaging>pom</packaging>
 

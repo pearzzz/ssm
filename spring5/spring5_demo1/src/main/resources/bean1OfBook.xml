@@ -3,7 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--配置User对象创建-->
-    <bean id="user" class="com.pearz.spring5.pojo.User"></bean>
-
+    <bean id="book" class="com.pearz.spring5.pojo.Book">
+        <property name="bookName" value="Java学习"></property>
+        <property name="author" value="哈哈"></property>
+    </bean>
 </beans>

@@ -1,4 +1,4 @@
-package com.pearz.spring5;
+package com.pearz.spring5.pojo;
 
 /**
  * @Description
