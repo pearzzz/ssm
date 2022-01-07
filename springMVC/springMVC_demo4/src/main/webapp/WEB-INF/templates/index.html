@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>首页</title>
+    </head>
+    <body>
+        <a th:href="@{/testRequestScope}">通过requestAPI</a><br>
+        <a th:href="@{/testModelAndView}">通过ModelAndView</a><br>
+        <a th:href="@{/testSession}">session</a><br>
+        <a th:href="@{/testApplication}">application</a><br>
+    </body>
+</html>
