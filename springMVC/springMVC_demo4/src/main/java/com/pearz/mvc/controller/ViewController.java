@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Date 19:05 2022/1/7
  */
 @Controller
-public class viewController {
+public class ViewController {
 
     @RequestMapping("/testThymeleafView")
     public String testThymeleafView() {
