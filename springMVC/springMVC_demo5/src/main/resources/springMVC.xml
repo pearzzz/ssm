@@ -53,12 +53,12 @@
     </mvc:interceptors>
 
     <!--配置异常处理-->
-    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+    <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
         <property name="exceptionMappings">
             <props>
                 <prop key="java.lang.ArithmeticException">error</prop>
             </props>
         </property>
         <property name="exceptionAttribute" value="ex"></property>
-    </bean>
+    </bean>-->
 </beans>
