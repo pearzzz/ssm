@@ -1,7 +1,6 @@
 package com.pearz.mvc.controller;
 
 import com.pearz.mvc.bean.User;
-import jdk.management.resource.internal.inst.AbstractInterruptibleChannelRMHooks;
 import org.springframework.http.RequestEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
