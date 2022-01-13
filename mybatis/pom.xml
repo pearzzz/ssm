@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>mybatis_demo1_helloworld</module>
+        <module>mybatis_demo2_config</module>
+        <module>mybatis_demo3_mapper</module>
     </modules>
 
     <properties>

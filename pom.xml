@@ -15,6 +15,7 @@
         <module>springMVC</module>
         <module>springMVC</module>
         <module>mybatis</module>
+        <module>mybatis_demo2_config</module>
     </modules>
     <packaging>pom</packaging>
 

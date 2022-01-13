@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pearz.mybatis.dao.EmployeeMapperPlus">
+    <resultMap id="myEmp" type="com.pearz.mybatis.bean.Employee">
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="email" property="email"/>
+        <result column="gender" property="gender"/>
+    </resultMap>
+    <select id="getEmpById" resultMap="myEmp">
+        select *
+        from tbl_employee
+        where id = #{id}
+    </select>
+
+    <resultMap id="myDifEmp" type="com.pearz.mybatis.bean.Employee">
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="email" property="email"/>
+        <result column="gender" property="gender"/>
+        <result column="d_id" property="dept.id"/>
+        <result column="dept_name" property="dept.departmentName"/>
+    </resultMap>
+
+    <resultMap id="myDifEmp2" type="com.pearz.mybatis.bean.Employee">
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="email" property="email"/>
+        <result column="gender" property="gender"/>
+
+        <association property="dept" javaType="com.pearz.mybatis.bean.Department">
+            <result column="d_id" property="id"/>
+            <result column="dept_name" property="departmentName"/>
+        </association>
+    </resultMap>
+    <select id="getEmpAndDept" resultMap="myDifEmp2">
+        select e.id id, e.last_name last_name, e.email email, e.gender gender, dept.id d_id, dept.dept_name dept_name
+        from tbl_employee e,
+             tbl_dept dept
+        where e.id = dept.id
+          and e.id = #{id}
+    </select>
+
+
+    <resultMap id="myEmpByStep" type="com.pearz.mybatis.bean.Employee">
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="email" property="email"/>
+        <result column="gender" property="gender"/>
+        <association property="dept" column="d_id"
+                     select="com.pearz.mybatis.dao.DepartmentMapper.getDeptById"></association>
+    </resultMap>
+    <select id="getEmpByIdStep" resultMap="myEmpByStep">
+        select *
+        from tbl_employee
+        where id = #{id}
+    </select>
+
+    <select id="getEmpsByDid" resultType="com.pearz.mybatis.bean.Employee">
+        select *
+        from tbl_employee
+        where d_id = #{d_id}
+    </select>
+</mapper>
