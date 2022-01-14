@@ -15,6 +15,8 @@
         <module>mybatis_demo1_helloworld</module>
         <module>mybatis_demo2_config</module>
         <module>mybatis_demo3_mapper</module>
+        <module>mybatis_demo4_DynamicSQL</module>
+        <module>mybatis_demo4_dynamicSQL</module>
     </modules>
 
     <properties>
