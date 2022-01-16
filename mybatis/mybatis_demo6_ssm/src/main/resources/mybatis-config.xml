@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-    <properties resource="dbconfig.properties"/>
+    <properties resource="jdbc.properties"/>
 
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
@@ -30,9 +30,6 @@
     </environments>
 
     <mappers>
-        <mapper resource="EmployeeMapper.xml"/>
-        <mapper resource="EmployeeMapperPlus.xml"/>
-        <mapper resource="DepartmentMapper.xml"/>
-        <mapper class="com.pearz.mybatis.dao.EmployeeMapperAnnotation"/>
+        <mapper resource="com/pearz/mapper/EmployeeMapper.xml"/>
     </mappers>
 </configuration>
